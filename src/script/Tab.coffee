@@ -7,12 +7,13 @@ window.ccTab = class ccTab
 
 		$tcontent.find('div').hide().filter(':first').show()
 
-		$tbar.find('a').click(->
+		$tbar.find('a').click((e)->
 			$this=$(this)
 			$tcontent.find('div').hide()
 			$tcontent.find('div').filter(this.hash).show()
 			$tactive.find('a.TabActiveLink').text($this.text())
 			$tactive.css( {"left": $this.parent().position().left})
+			e.preventDefault()
 		)
 
 	destroy: ->
