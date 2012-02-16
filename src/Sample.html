@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+	<title>Tab Controls</title>
+
+	<link rel="stylesheet" type="text/css" href="css/Tab.css"/>
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="script/Tab.js"></script>
+	
+	<script type="text/javascript" charset="utf-8">
+	// Dom Load Event.
+	$(function() {
+		$("#HomeTab").ccTab({  });
+		$("#AccountTab").ccTab({  });
+		$("#OnBoardingTab").ccTab({  });
+		$("#SystemTab").ccTab({  });
+		$("#ReportTab").ccTab({  });
+		$("#AssetTab").ccTab({  });
+	});			
+	</script>
+</head>
+
+<body>
+
+<h1>Home Tab</h1>
+<div id="HomeTab" style="display: block;" >
+  <div style="height: 39px;">
+    <!-- Sub Nav Tabs -->
+    <div class="PR Ht FS1">
+      <div class="TabActive PA SNPosnAbs TMar20"  style="display:block;">
+        <div class="SNHighLightL"></div>
+        <div class="SNHighLightM"><a class="TabActiveLink SubNavLnk" href="#Home1;">Tab 1</a></div>
+        <div class="SNHighLightR"></div>
+      </div>
+    </div>
+    <div class="TabBar Fl PR TMar20">  
+      <div class="SNNormal"><a href="#HomeContent1" class="SubNavLnk">Tab 1</a></div>
+      <div class="SNNormal"><a href="#HomeContent2" class="SubNavLnk">Tab 2</a></div>
+    </div>
+  </div>
+  <div class="HROrange"></div>
+  <div class="HRShadow1"></div>
+  <div class="TabContent">
+  	<div id="HomeContent1">Tab 1 Content</div>
+  	<div id="HomeContent2">Tab 2 Content</div>
+  </div>
+</div>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<h1>Account Tab</h1>
+<div id="AccountTab" style="display: block;" >
+  <div style="height: 39px;">
+    <!-- Sub Nav Tabs -->
+    <div class="PR Ht FS1">
+      <div class="TabActive PA SNPosnAbs TMar20"  style="display:block;">
+        <div class="SNHighLightL"></div>
+        <div class="SNHighLightM"><a class="TabActiveLink SubNavLnk" href="#Account1;">Account Info</a></div>
+        <div class="SNHighLightR"></div>
+      </div>
+    </div>
+    <div class="TabBar Fl PR TMar20">  
+      <div class="SNNormal"><a href="#AccountInfoContent" class="SubNavLnk">Account Info</a></div>
+      <div class="SNNormal"><a href="#AccountUserContent" class="SubNavLnk">Users</a></div>
+      <div class="SNNormal"><a href="#AccountRoleContent" class="SubNavLnk">Roles</a></div>
+    </div>
+  </div>
+  <div class="HRGreen"></div>
+  <div class="HRShadow1"></div>
+  <div class="TabContent">
+  	<div id="AccountInfoContent">Account Info Content</div>
+  	<div id="AccountUserContent">Users Content</div>
+  	<div id="AccountRoleContent">Roles Content</div>
+  </div>
+</div>
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+<h1>OnBoarding Tab</h1>
+<div id="OnBoardingTab" style="display: block;" >
+  <div style="height: 39px;">
+    <!-- Sub Nav Tabs -->
+    <div class="PR Ht FS1">
+      <div class="TabActive PA SNPosnAbs TMar20"  style="display:block;">
+        <div class="SNHighLightL"></div>
+        <div class="SNHighLightM"><a class="TabActiveLink SubNavLnk" href="#OnBoarding;">Data Mapping</a></div>
+        <div class="SNHighLightR"></div>
+      </div>
+    </div>
+    <div class="TabBar Fl PR TMar20">  
+      <div class="SNNormal"><a href="#OnBoardingDataMappingContent" class="SubNavLnk">Data Mapping</a></div>
+      <div class="SNNormal"><a href="#OnBoardingProfileContent" class="SubNavLnk">Profiles</a></div>
+      <div class="SNNormal"><a href="#OnBoardingWorkFlowContent" class="SubNavLnk">Work Flow</a></div>
+      <div class="SNNormal"><a href="#OnBoardingInstructionContent" class="SubNavLnk">Instructions</a></div>
+    </div>
+  </div>
+  <div class="HRYellow"></div>
+  <div class="HRShadow1"></div>
+  <div class="TabContent">
+  	<div id="OnBoardingDataMappingContent">Data Mapping Content</div>
+  	<div id="OnBoardingProfileContent">Profiles Content</div>
+  	<div id="OnBoardingWorkFlowContent">Work Flow Content</div>
+  	<div id="OnBoardingInstructionContent">Instructions Content</div>
+  </div>
+</div>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<h1>System Tab</h1>
+<div id="SystemTab" style="display: block;" >
+  <div style="height: 39px;">
+    <!-- Sub Nav Tabs -->
+    <div class="PR Ht FS1">
+      <div class="TabActive PA SNPosnAbs TMar20"  style="display:block;">
+        <div class="SNHighLightL"></div>
+        <div class="SNHighLightM"><a class="TabActiveLink SubNavLnk" href="#System1;">Tab 1</a></div>
+        <div class="SNHighLightR"></div>
+      </div>
+    </div>
+    <div class="TabBar Fl PR TMar20">  
+      <div class="SNNormal"><a href="#SystemContent1" class="SubNavLnk">Tab 1</a></div>
+      <div class="SNNormal"><a href="#SystemContent2" class="SubNavLnk">Tab 2</a></div>
+    </div>
+  </div>
+  <div class="HRPurple"></div>
+  <div class="HRShadow1"></div>
+  <div class="TabContent">
+  	<div id="SystemContent1">Tab 1 Content</div>
+  	<div id="SystemContent2">Tab 2 Content</div>
+  </div>
+</div>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<h1>Report Tab</h1>
+<div id="ReportTab" style="display: block;" >
+  <div style="height: 39px;">
+    <!-- Sub Nav Tabs -->
+    <div class="PR Ht FS1">
+      <div class="TabActive PA SNPosnAbs TMar20"  style="display:block;">
+        <div class="SNHighLightL"></div>
+        <div class="SNHighLightM"><a class="TabActiveLink SubNavLnk" href="#Report1;">Tab 1</a></div>
+        <div class="SNHighLightR"></div>
+      </div>
+    </div>
+    <div class="TabBar Fl PR TMar20">  
+      <div class="SNNormal"><a href="#ReportContent1" class="SubNavLnk">Tab 1</a></div>
+      <div class="SNNormal"><a href="#ReportContent2" class="SubNavLnk">Tab 2</a></div>
+    </div>
+  </div>
+  <div class="HRPink"></div>
+  <div class="HRShadow1"></div>
+  <div class="TabContent">
+  	<div id="ReportContent1">Tab 1 Content</div>
+  	<div id="ReportContent2">Tab 2 Content</div>
+  </div>
+</div>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<h1>Asset Tab</h1>
+<div id="AssetTab" style="display: block;" >
+  <div style="height: 39px;">
+    <!-- Sub Nav Tabs -->
+    <div class="PR Ht FS1">
+      <div class="TabActive PA SNPosnAbs TMar20"  style="display:block;">
+        <div class="SNHighLightL"></div>
+        <div class="SNHighLightM"><a class="TabActiveLink SubNavLnk" href="#Asset1;">Tab 1</a></div>
+        <div class="SNHighLightR"></div>
+      </div>
+    </div>
+    <div class="TabBar Fl PR TMar20">  
+      <div class="SNNormal"><a href="#AssetContent1" class="SubNavLnk">Tab 1</a></div>
+      <div class="SNNormal"><a href="#AssetContent2" class="SubNavLnk">Tab 2</a></div>
+    </div>
+  </div>
+  <div class="HRBlue"></div>
+  <div class="HRShadow1"></div>
+  <div class="TabContent">
+  	<div id="AssetContent1">Tab 1 Content</div>
+  	<div id="AssetContent2">Tab 2 Content</div>
+  </div>
+</div>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+	
+</body>
+
+</html>
