@@ -13,7 +13,7 @@ window.ccTab = class ccTab
 			$tcontent.find('div').filter(this.hash).show()
 			$tactive.find('a.TabActiveLink').text($this.text())
 			$tactive.css( {"left": $this.parent().position().left})
-			e.preventDefault()
+			#e.preventDefault()
 		)
 
 	destroy: ->
