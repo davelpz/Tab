@@ -13,11 +13,13 @@
       $tactive = $element.find('div.TabActive');
       $tcontent.find('div').hide().filter(':first').show();
       return $tbar.find('a').click(function() {
+        var $this;
+        $this = $(this);
         $tcontent.find('div').hide();
         $tcontent.find('div').filter(this.hash).show();
-        $tactive.find('a.TabActiveLink').text($(this).text());
+        $tactive.find('a.TabActiveLink').text($this.text());
         return $tactive.css({
-          "left": $(this).parent().position().left
+          "left": $this.parent().position().left
         });
       });
     };
