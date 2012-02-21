@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>jQuery UI Tab Control </title>
+    <link rel="stylesheet" type="text/css" href="css/TabControl.css">
+
+    <!-- include external libraries here... -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+    
+    <!-- include internal libraries here... -->
+    <script src="script/TabControl.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+/* The Widget accepts 4 parameters Name, TabIds , TabTitles and color as per requirment the widget can be called by passing following parameters sets :
+      1. TabIds and TabTitles, as shown (in sample 1) below 
+      2. TabIDs alone, in which case the title attribute of the content divs from the html will be set as 'title' for the tab.(shown in sample 2) 
+      3. 'TabTitles' alone, in which case all the subsequent divs inside the parent div of the widget other than the widget itself will be considered as the tabs(shown in sample 3)
+      4. No parameter but the name alone, in which case all the subsequent divs inside the parent div of the widget other than the widget itself will be considered as the tabs and their title attribute in html will be set as the title for the tab (shown in sample 4)    
+ 
+     therefore its very important to keep the tab widget div and the content tab divs inside a container div. 
+*/
+        $(function () {
+            $("#Sample1").TabControl({
+                Name: "All_Params_Passed",
+                TabIDs: ["tab1", "tab2", "tab3"],
+                TabTitles: ["AccountInfo", "Users", "Roles"],
+                Color: "Green" // Orange, green, yellow, purple, pink or blue
+            });
+        });
+
+        $(function () {
+            $("#Sample2").TabControl({
+                Name: "Only_TabIds_passed",
+                TabIDs: ["tabid1", "tabid2"],
+                Color: "Yellow"
+            });
+        });
+
+        $(function () {
+            $("#Sample3").TabControl({
+                Name: "Only_TabTitles_passed",
+                TabTitles: ["Title 1 from call", "Title 2 from call"],
+                Color: "Purple"
+            });
+        });
+
+        $(function () {
+            $("#Sample4").TabControl({
+                Name: "No_Params_Passed"
+            });
+        });
+
+ 
+
+    </script>
+</head>
+
+<body style="font-family:arial;">
+    
+	<!-- Sample 1 : (Everything is supplied in the call including ids and titles of the content tab)-->
+	<h3>Account Tab</h3>	
+	<div>     
+        <!--this div below will call the tab widget-->
+        <div id="Sample1">
+        </div>
+        
+        <div id="tab1">
+            Content of tab 1 ( can be modified in the html page )
+        </div>
+        <div id="tab2">
+            Content of tab 2 ( can be modified in the html page )
+        </div>
+        <div id="tab3">
+            Content of tab 3 ( can be modified in the html page )
+        </div>
+    </div>
+    
+    <!-- Sample 2 : (Only content tabs id passed in call title from below is set as tab title)-->
+	<h3>OnBoarding Tab</h3>
+	<div>
+        <div id="Sample2">
+        </div>
+        <div id="tabid1" title="title1 from html">
+            Content of tab 1
+        </div>
+        <div id="tabid2" title="title 2 from html">
+            Content of tab 2 
+        </div>
+    </div>
+    
+    <!-- Sample 3 : (Only content tabs title passed in call id from below is used)-->
+	<h3>Report Tab</h3>  
+    <div>
+        <div id="Sample3">
+        </div>
+        <div id="Div7" >
+            Report Tab 1
+        </div>
+        <div id="Div8" >
+            Report Tab 2 
+        </div>
+    </div>
+
+    <!-- Sample 4 : (Nothing is supplied in the call . ids and titles of the content tab are picked from the html page)-->
+	<h3>System Tab</h3>
+    <div>
+        <div id="Sample4">
+        </div>
+        <div id="T1" title="1 title and Id from html">
+            DataMapping Content of tab 1
+        </div>
+        <div id="T2" title="2 title and Id from html">
+            Profiles Content of tab 2 
+        </div>
+    </div>
+	
+</body>
+</html>
