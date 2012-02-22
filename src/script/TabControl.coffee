@@ -57,7 +57,7 @@
 		
 		
 	_init: ->
-	
+		
 		($ '#'+@options.Name+" ." +@css.TabMenu).click (event) =>
 			#hide the previous tab contents and remove active classes in tab widget 
 			$(@element[0].parentNode).find( '.'+ @css.ActiveTabContent).attr( style: "display:none" ).removeClass(@css.ActiveTabContent)
@@ -71,8 +71,7 @@
 			this.childNodes[0].className = @css.ActiveTabLeft
 			this.childNodes[1].className = @css.ActiveTabMiddle
 			this.childNodes[2].className = @css.ActiveTabRight
-			var x = this;
-			#window.location = @options.URLs[this ]
+			window.location = @options.URLs[this.attributes[1].value]
 		
 	options:
 		Name: "Default"
