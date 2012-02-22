@@ -7,7 +7,7 @@
         function TabControl() { }
 
         TabControl.prototype._create = function () {
-            var Line, TabHead, TabID, divs, tempLeft, tempMiddle, tempRight, tempTab, _i, _j, _k, _len, _len2, _len3, _ref, _ref2, _ref3;
+            var Line, TabHead, TabID, TabIDs, divs, tempLeft, tempMiddle, tempRight, tempTab, _i, _j, _k, _l, _len, _len2, _len3, _len4, _len5, _m, _ref, _ref2, _ref3, _ref4, _ref5;
             TabHead = ($('<div/>')).attr({
                 id: "TabHead"
             }).addClass(this.css.TabHead);
@@ -55,11 +55,28 @@
                 }
                 tempTab = ($('<div/>')).attr({
                     id: TabID + "_TabMenu"
+                }).attr({
+                    title: _k
                 }).addClass(this.css.TabMenu).append(tempLeft).append(tempMiddle).append(tempRight);
                 TabHead.append(tempTab);
                 $(this.element[0].parentNode).find('#' + TabID).attr({
                     style: "display:none"
                 }).addClass(this.css.TabContent);
+            }
+            if (this.options.URLs[0] === "undefined") {
+                _ref4 = this.options.TabIDs;
+                for (_l = 0, _len4 = _ref4.length; _l < _len4; _l++) {
+                    TabIDs = _ref4[_l];
+                    this.options.URLs[_l] = '#' + this.options.TabIDs[_l];
+                }
+            } else {
+                _ref5 = this.options.TabIDs;
+                for (_m = 0, _len5 = _ref5.length; _m < _len5; _m++) {
+                    TabIDs = _ref5[_m];
+                    if (this.options.URLs[_m] === "") {
+                        this.options.URLs[_m] = '#' + this.options.TabIDs[_m];
+                    }
+                }
             }
             Line = ($('<div/>')).addClass(this.css.Line).addClass(this.options.Color);
             ($(this.element)).addClass(this.css.WrapperTabControl).attr({
@@ -87,7 +104,8 @@
                 }).addClass(_this.css.ActiveTabContent);
                 this.childNodes[0].className = _this.css.ActiveTabLeft;
                 this.childNodes[1].className = _this.css.ActiveTabMiddle;
-                return this.childNodes[2].className = _this.css.ActiveTabRight;
+                this.childNodes[2].className = _this.css.ActiveTabRight;
+                return window.location = _this.options.URLs[this.attributes[1].value];
             });
         };
 
@@ -95,6 +113,7 @@
             Name: "Default",
             TabIDs: ["undefined"],
             TabTitles: ["undefined"],
+            URLs: ["undefined"],
             Color: "Orange"
         };
 
@@ -112,7 +131,7 @@
             InActiveTabRight: 'inactiveRight',
             Line: 'ui-tab-line',
             TabContent: 'ui-tab-content',
-            ActiveTabContent: 'activeTabContent'
+            ActiveTabContent: 'emptyDummy'
         };
 
         return TabControl;
@@ -121,4 +140,6 @@
 
     $.widget("vdms.TabControl", new TabControl);
 
+
 }).call(this);
+

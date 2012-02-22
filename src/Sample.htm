@@ -13,19 +13,22 @@
     <script src="script/TabControl.js" type="text/javascript"></script>
     <script type="text/javascript">
 
-/* The Widget accepts 4 parameters Name, TabIds , TabTitles and color as per requirment the widget can be called by passing following parameters sets :
-      1. TabIds and TabTitles, as shown (in sample 1) below 
-      2. TabIDs alone, in which case the title attribute of the content divs from the html will be set as 'title' for the tab.(shown in sample 2) 
-      3. 'TabTitles' alone, in which case all the subsequent divs inside the parent div of the widget other than the widget itself will be considered as the tabs(shown in sample 3)
-      4. No parameter but the name alone, in which case all the subsequent divs inside the parent div of the widget other than the widget itself will be considered as the tabs and their title attribute in html will be set as the title for the tab (shown in sample 4)    
- 
-     therefore its very important to keep the tab widget div and the content tab divs inside a container div. 
-*/
+        /* The Widget accepts 4 parameters Name, TabIds , TabTitles and color as per requirment the widget can be called by passing following parameters sets :
+        1. TabIds and TabTitles, as shown (in sample 1) below 
+        2. TabIDs alone, in which case the title attribute of the content divs from the html will be set as 'title' for the tab.(shown in sample 2) 
+        3. 'TabTitles' alone, in which case all the subsequent divs inside the parent div of the widget other than the widget itself will be considered as the tabs(shown in sample 3)
+        4. No parameter but the name alone, in which case all the subsequent divs inside the parent div of the widget other than the widget itself will be considered as the tabs and their title attribute in html will be set as the title for the tab (shown in sample 4)    
+        
+        The URL parameter if specified will redirect the page on clicking the tab to that specific URl if however left undefined the switch occours between the tab content :
+        
+        therefore its very important to keep the tab widget div and the content tab divs inside a container div. 
+        */
         $(function () {
             $("#Sample1").TabControl({
                 Name: "All_Params_Passed",
                 TabIDs: ["tab1", "tab2", "tab3"],
                 TabTitles: ["AccountInfo", "Users", "Roles"],
+                URLs: ["http://www.google.co.in", "http://www.yahoo.co.in", "http://www.msn.co.in"],                                 // all URLs specified
                 Color: "Green" // Orange, green, yellow, purple, pink or blue
             });
         });
@@ -34,6 +37,7 @@
             $("#Sample2").TabControl({
                 Name: "Only_TabIds_passed",
                 TabIDs: ["tabid1", "tabid2"],
+                URLs: ["", "http://www.msn.co.in"],                          // some URLs specified for rest to leave empty pass empty string as shown
                 Color: "Yellow"
             });
         });
@@ -42,7 +46,7 @@
             $("#Sample3").TabControl({
                 Name: "Only_TabTitles_passed",
                 TabTitles: ["Title 1 from call", "Title 2 from call"],
-                Color: "Purple"
+                Color: "Purple"                                                 //No URLs Specified
             });
         });
 
