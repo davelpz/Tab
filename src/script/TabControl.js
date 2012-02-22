@@ -118,20 +118,19 @@
         };
 
         TabControl.prototype.css = {
-            TabWrapper: 'ui-tab-widget-wrapper',
-            WrapperTabControl: 'ui-tab-widget',
-            TabHead: "ui-tab-menu-wrapper",
-            TabMenu: 'ui-tab-menu',
-            ActiveTab: 'ui-menu-active',
-            ActiveTabLeft: 'activeLeft',
-            ActiveTabMiddle: 'activeMiddle',
-            ActiveTabRight: 'activeRight',
-            InActiveTabLeft: 'inactiveLeft',
-            InActiveTabMiddle: 'inactiveMiddle',
-            InActiveTabRight: 'inactiveRight',
-            Line: 'ui-tab-line',
-            TabContent: 'ui-tab-content',
-            ActiveTabContent: 'emptyDummy'
+            TabWrapper: 'ccTab-widget-wrapper',
+            WrapperTabControl: 'ccTab-widget',
+            TabHead: "ccTab-menu-wrapper",
+            TabMenu: 'ccTab-menu',
+            ActiveTabLeft: 'ccTab-activeLeft',
+            ActiveTabMiddle: 'ccTab-activeMiddle',
+            ActiveTabRight: 'ccTab-activeRight',
+            InActiveTabLeft: 'ccTab-inactiveLeft',
+            InActiveTabMiddle: 'ccTab-inactiveMiddle',
+            InActiveTabRight: 'ccTab-inactiveRight',
+            Line: 'ccTab-line',
+            TabContent: 'ccTab-content',
+            ActiveTabContent: 'emptyDummy'//where is this coming from jquery???
         };
 
         return TabControl;

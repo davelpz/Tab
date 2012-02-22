@@ -1,20 +1,22 @@
-.ui-tab-widget-wrapper{
+//simpless:!minify
+
+.ccTab-widget-wrapper{
 
 	font-size:12px;
 	font-family:Arial,Helvetica,sans-serif;
 	color:#000;
 	
-	.ui-tab-widget{
+	.ccTab-widget{
 		font-size:12px;
 		font-family:Arial,Helvetica,sans-serif;
 		color:#000;
 		height:60px;
-		background:url(images/Img3.png) repeat-x;
+		background:url(../images/ccTabControlLine.png) repeat-x;
 		font-size:1px;
 		width:100%;
 		background-position:0px 43px;
 
-		.ui-tab-menu-wrapper{
+		.ccTab-menu-wrapper{
 			height:39px;
 			position:relative;
 			z-index:10;
@@ -23,7 +25,7 @@
 			margin-left:20px;
 			display:inline-block;
 		}
-		.ui-tab-menu{
+		.ccTab-menu{
 			font-size:12px;
 			display:inline-block;
 			padding:10px 5px;
@@ -33,7 +35,7 @@
 			margin:5px 0 0 5px;
 			float:left;
 		}
-		.ui-tab-line{
+		.ccTab-line{
 			height:4px;font-size:1px;position:relative;top:0px;
 			
 			&.Orange{background-color:#FF9120;}
@@ -45,16 +47,16 @@
 			
 		}
 		
-		.activeLeft{
-			background:url(images/Img4.png) 0 0 no-repeat;
+		.ccTab-activeLeft{
+			background:url(../images/ccTabControlBackground.png) 0 0 no-repeat;
 			height:63px;
 			width:20px;
 			float:left;
 			top:-14px;
 			position:relative;
 		}
-		.activeMiddle{
-			background:url(images/Img4.png) 0 -75px repeat-x;
+		.ccTab-activeMiddle{
+			background:url(../images/ccTabControlBackground.png) 0 -75px repeat-x;
 			height:63px;
 			float:left;
 			padding-top:10px;
@@ -62,15 +64,15 @@
 			top:-14px;
 			position:relative;
 		}
-		.activeRight{
-			background:url(images/Img4.png) -22px 0 no-repeat;
+		.ccTab-activeRight{
+			background:url(../images/ccTabControlBackground.png) -22px 0 no-repeat;
 			height:63px;
 			width:22px;
 			float:left;
 			top:-14px; 
 			position:relative;
 		}
-		.inactiveLeft{
+		.ccTab-inactiveLeft{
 			background-color:transparent;
 			height:63px;
 			width:20px;
@@ -79,7 +81,7 @@
 			top:-14px;
 			position:relative;
 		}
-		.inactiveMiddle{
+		.ccTab-inactiveMiddle{
 			background-color:transparent;
 			height:63px;
 			float:left;
@@ -88,7 +90,7 @@
 			top:-14px;
 			position:relative;
 		}
-		.inactiveRight{
+		.ccTab-inactiveRight{
 			background-color:transparent;
 			height:63px;
 			width:22px;
@@ -98,5 +100,5 @@
 		}
 
 	}
-	.ui-tab-content{font-size:12px;font-family:Arial,Helvetica,sans-serif;color:#000;padding:10px 20px;}
+	.ccTab-content{font-size:12px;font-family:Arial,Helvetica,sans-serif;color:#000;padding:10px 20px;}
 }
