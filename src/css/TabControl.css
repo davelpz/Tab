@@ -1,10 +1,9 @@
-/* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */
-.ccTab-widget-wrapper {
+.ccTabControl-widget-wrapper {
   font-size: 12px;
   font-family: Arial, Helvetica, sans-serif;
   color: #000;
 }
-.ccTab-widget-wrapper .ccTab-widget {
+.ccTabControl-widget-wrapper .ccTabControl-widget {
   font-size: 12px;
   font-family: Arial, Helvetica, sans-serif;
   color: #000;
@@ -14,7 +13,7 @@
   width: 100%;
   background-position: 0px 43px;
 }
-.ccTab-widget-wrapper .ccTab-widget .ccTab-menu-wrapper {
+.ccTabControl-widget-wrapper .ccTabControl-widget .ccTabControl-menu-wrapper {
   height: 39px;
   position: relative;
   z-index: 10;
@@ -23,7 +22,7 @@
   margin-left: 20px;
   display: inline-block;
 }
-.ccTab-widget-wrapper .ccTab-widget .ccTab-menu {
+.ccTabControl-widget-wrapper .ccTabControl-widget .ccTabControl-menu {
   font-size: 12px;
   display: inline-block;
   padding: 10px 5px;
@@ -33,31 +32,31 @@
   margin: 5px 0 0 5px;
   float: left;
 }
-.ccTab-widget-wrapper .ccTab-widget .ccTab-line {
+.ccTabControl-widget-wrapper .ccTabControl-widget .ccTabControl-line {
   height: 4px;
   font-size: 1px;
   position: relative;
   top: 0px;
 }
-.ccTab-widget-wrapper .ccTab-widget .ccTab-line.Orange {
+.ccTabControl-widget-wrapper .ccTabControl-widget .ccTabControl-line.Orange {
   background-color: #FF9120;
 }
-.ccTab-widget-wrapper .ccTab-widget .ccTab-line.Green {
+.ccTabControl-widget-wrapper .ccTabControl-widget .ccTabControl-line.Green {
   background-color: #79C944;
 }
-.ccTab-widget-wrapper .ccTab-widget .ccTab-line.Yellow {
+.ccTabControl-widget-wrapper .ccTabControl-widget .ccTabControl-line.Yellow {
   background-color: #FBBC4B;
 }
-.ccTab-widget-wrapper .ccTab-widget .ccTab-line.Purple {
+.ccTabControl-widget-wrapper .ccTabControl-widget .ccTabControl-line.Purple {
   background-color: #A673E9;
 }
-.ccTab-widget-wrapper .ccTab-widget .ccTab-line.Pink {
+.ccTabControl-widget-wrapper .ccTabControl-widget .ccTabControl-line.Pink {
   background-color: #FF62FF;
 }
-.ccTab-widget-wrapper .ccTab-widget .ccTab-line.Blue {
+.ccTabControl-widget-wrapper .ccTabControl-widget .ccTabControl-line.Blue {
   background-color: #3FA9F5;
 }
-.ccTab-widget-wrapper .ccTab-widget .ccTab-activeLeft {
+.ccTabControl-widget-wrapper .ccTabControl-widget .ccTabControl-activeLeft {
   background: url(../images/ccTabControlBackground.png) 0 0 no-repeat;
   height: 63px;
   width: 20px;
@@ -65,7 +64,7 @@
   top: -14px;
   position: relative;
 }
-.ccTab-widget-wrapper .ccTab-widget .ccTab-activeMiddle {
+.ccTabControl-widget-wrapper .ccTabControl-widget .ccTabControl-activeMiddle {
   background: url(../images/ccTabControlBackground.png) 0 -75px repeat-x;
   height: 63px;
   float: left;
@@ -74,7 +73,7 @@
   top: -14px;
   position: relative;
 }
-.ccTab-widget-wrapper .ccTab-widget .ccTab-activeRight {
+.ccTabControl-widget-wrapper .ccTabControl-widget .ccTabControl-activeRight {
   background: url(../images/ccTabControlBackground.png) -22px 0 no-repeat;
   height: 63px;
   width: 22px;
@@ -82,7 +81,7 @@
   top: -14px;
   position: relative;
 }
-.ccTab-widget-wrapper .ccTab-widget .ccTab-inactiveLeft {
+.ccTabControl-widget-wrapper .ccTabControl-widget .ccTabControl-inactiveLeft {
   background-color: transparent;
   height: 63px;
   width: 20px;
@@ -91,7 +90,7 @@
   top: -14px;
   position: relative;
 }
-.ccTab-widget-wrapper .ccTab-widget .ccTab-inactiveMiddle {
+.ccTabControl-widget-wrapper .ccTabControl-widget .ccTabControl-inactiveMiddle {
   background-color: transparent;
   height: 63px;
   float: left;
@@ -100,7 +99,7 @@
   top: -14px;
   position: relative;
 }
-.ccTab-widget-wrapper .ccTab-widget .ccTab-inactiveRight {
+.ccTabControl-widget-wrapper .ccTabControl-widget .ccTabControl-inactiveRight {
   background-color: transparent;
   height: 63px;
   width: 22px;
@@ -108,7 +107,7 @@
   top: -14px;
   position: relative;
 }
-.ccTab-widget-wrapper .ccTab-content {
+.ccTabControl-widget-wrapper .ccTabControl-content {
   font-size: 12px;
   font-family: Arial, Helvetica, sans-serif;
   color: #000;

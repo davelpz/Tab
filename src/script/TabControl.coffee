@@ -1,4 +1,4 @@
-﻿window.TabControl = class TabControl
+﻿window.ccTabControl = class ccTabControl
 	_create: -> 
 		
 		TabHead = ($ '<div/>').attr(id : "TabHead")  
@@ -57,21 +57,21 @@
 		
 		
 	_init: ->
-		
-		($ '#'+@options.Name+" ." +@css.TabMenu).click (event) =>
+		me = this
+		($ '#'+@options.Name+" ." +@css.TabMenu).click (event) ->
 			#hide the previous tab contents and remove active classes in tab widget 
-			$(@element[0].parentNode).find( '.'+ @css.ActiveTabContent).attr( style: "display:none" ).removeClass(@css.ActiveTabContent)
-			$(@element[0].parentNode).find( '.'+ @css.ActiveTabLeft).removeClass(@css.ActiveTabLeft).addClass(@css.InActiveTabLeft)
-			$(@element[0].parentNode).find( '.'+ @css.ActiveTabMiddle).removeClass(@css.ActiveTabMiddle).addClass(@css.InActiveTabMiddle)
-			$(@element[0].parentNode).find( '.'+ @css.ActiveTabRight).removeClass(@css.ActiveTabRight).addClass(@css.InActiveTabRight)
+			$(me.element[0].parentNode).find( '.'+ me.css.ActiveTabContent).attr( style: "display:none" ).removeClass(me.css.ActiveTabContent)
+			$(me.element[0].parentNode).find( '.'+ me.css.ActiveTabLeft).removeClass(me.css.ActiveTabLeft).addClass(me.css.InActiveTabLeft)
+			$(me.element[0].parentNode).find( '.'+ me.css.ActiveTabMiddle).removeClass(me.css.ActiveTabMiddle).addClass(me.css.InActiveTabMiddle)
+			$(me.element[0].parentNode).find( '.'+ me.css.ActiveTabRight).removeClass(me.css.ActiveTabRight).addClass(me.css.InActiveTabRight)
 		
 			#show the selected tab contents and add active classes in tab widget 
-			HtmlTabID = this.id.substring(0, this.id.indexOf('_')) 																					# manual changes in javascript!!
-			$(@element[0].parentNode).find( '#' + HtmlTabID ).attr( style: "display:block" ).addClass(@css.ActiveTabContent)                                                # manual changes in javascript!!
-			this.childNodes[0].className = @css.ActiveTabLeft
-			this.childNodes[1].className = @css.ActiveTabMiddle
-			this.childNodes[2].className = @css.ActiveTabRight
-			window.location = @options.URLs[this.attributes[1].value]
+			HtmlTabID = this.id.substring(0, this.id.indexOf('_')) 		
+			$(me.element[0].parentNode).find( '#' + HtmlTabID ).attr( style: "display:block" ).addClass(me.css.ActiveTabContent)
+			this.childNodes[0].className = me.css.ActiveTabLeft
+			this.childNodes[1].className = me.css.ActiveTabMiddle
+			this.childNodes[2].className = me.css.ActiveTabRight
+			window.location = me.options.URLs[this.attributes[1].value]
 		
 	options:
 		Name: "Default"
@@ -82,20 +82,19 @@
 		
 
 	css:
-		TabWrapper : 'ui-tab-widget-wrapper'
-		WrapperTabControl: 'ui-tab-widget'
-		TabHead: "ui-tab-menu-wrapper"
-		TabMenu: 'ui-tab-menu'
-		ActiveTab: 'ui-menu-active'
-		ActiveTabLeft: 'activeLeft'
-		ActiveTabMiddle: 'activeMiddle'
-		ActiveTabRight: 'activeRight'
-		InActiveTabLeft: 'inactiveLeft'
-		InActiveTabMiddle: 'inactiveMiddle'
-		InActiveTabRight: 'inactiveRight'
-		Line: 'ui-tab-line'
-		TabContent: 'ui-tab-content'
-		ActiveTabContent: 'emptyDummy'
+        TabWrapper: 'ccTabControl-widget-wrapper',
+        WrapperTabControl: 'ccTabControl-widget',
+        TabHead: "ccTabControl-menu-wrapper",
+        TabMenu: 'ccTabControl-menu',
+        ActiveTabLeft: 'ccTabControl-activeLeft',
+        ActiveTabMiddle: 'ccTabControl-activeMiddle',
+        ActiveTabRight: 'ccTabControl-activeRight',
+        InActiveTabLeft: 'ccTabControl-inactiveLeft',
+        InActiveTabMiddle: 'ccTabControl-inactiveMiddle',
+        InActiveTabRight: 'ccTabControl-inactiveRight',
+        Line: 'ccTabControl-line',
+        TabContent: 'ccTabControl-content',
+        ActiveTabContent: 'emptyDummy'  #where is this coming from jquery???
 
 			
-$.widget "vdms.TabControl", new TabControl
+$.widget "cc.ccTabControl", new ccTabControl

@@ -24,7 +24,7 @@
         therefore its very important to keep the tab widget div and the content tab divs inside a container div. 
         */
         $(function () {
-            $("#Sample1").TabControl({
+            $("#Sample1").ccTabControl({
                 Name: "All_Params_Passed",
                 TabIDs: ["tab1", "tab2", "tab3"],
                 TabTitles: ["AccountInfo", "Users", "Roles"],
@@ -34,7 +34,7 @@
         });
 
         $(function () {
-            $("#Sample2").TabControl({
+            $("#Sample2").ccTabControl({
                 Name: "Only_TabIds_passed",
                 TabIDs: ["tabid1", "tabid2"],
                 URLs: ["", "http://www.msn.co.in"],                          // some URLs specified for rest to leave empty pass empty string as shown
@@ -43,7 +43,7 @@
         });
 
         $(function () {
-            $("#Sample3").TabControl({
+            $("#Sample3").ccTabControl({
                 Name: "Only_TabTitles_passed",
                 TabTitles: ["Title 1 from call", "Title 2 from call"],
                 Color: "Purple"                                                 //No URLs Specified
@@ -51,7 +51,7 @@
         });
 
         $(function () {
-            $("#Sample4").TabControl({
+            $("#Sample4").ccTabControl({
                 Name: "No_Params_Passed"
             });
         });
